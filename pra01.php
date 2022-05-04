@@ -33,7 +33,17 @@
 
     echo "<hr>";
 
+    $allDay=[]; //空陣列(準備放入所有天數)
+    for($i=0; $i<$monthDay ; $i++){
+        $date=date('Y-m-d',strtotime("+$i days",$firstDaySecond));
+        $allDay[]=$date;
+    }
 
+    echo "<pre>";
+    print_r($allDay);
+    echo "</pre>";
+
+    echo "<hr>";
 
     ?>
 </body>
