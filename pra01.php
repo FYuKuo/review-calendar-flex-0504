@@ -45,6 +45,11 @@
 
     echo "<hr>";
 
+    foreach($allDay as $day){
+
+
+        echo "<div>{$day}</div>";
+    }
     ?>
 </body>
 </html>
