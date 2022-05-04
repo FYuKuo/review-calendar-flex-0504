@@ -15,13 +15,24 @@
             width: 700px;
             height: 700px;
             align-content: flex-start;
+            text-align: center;
+            margin: 10px auto;
         }
 
         .table>div {
             width: 100px;
             height: 100px;
             border: 1px solid lightgrey;
+            line-height: 100px;
 
+        }
+
+        .table>.header {
+            width: 100px;
+            height: 50px;
+            border: 1px solid lightgrey;
+            line-height: 50px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -65,6 +76,14 @@
     echo "<hr>";
 
     echo "<div class='table'>";
+
+    echo "<div class='header'>SUN</div>";
+    echo "<div class='header'>MON</div>";
+    echo "<div class='header'>TUE</div>";
+    echo "<div class='header'>WED</div>";
+    echo "<div class='header'>THU</div>";
+    echo "<div class='header'>FRI</div>";
+    echo "<div class='header'>SAT</div>";
 
     foreach($allDay as $day){
 
