@@ -34,6 +34,12 @@
             line-height: 50px;
             font-weight: bold;
         }
+
+        .today {
+            color: red;
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
     </style>
 </head>
 <body>
@@ -85,11 +91,21 @@
     echo "<div class='header'>FRI</div>";
     echo "<div class='header'>SAT</div>";
 
-    foreach($allDay as $day){
 
+    //利用陣列的迴圈將陣列包在div裡面印出
+    foreach($allDay as $day){
+        $checktoday="";
+        $today=date("Y-m-d");
+
+        if($day == $today){
+            $checktoday='today';
+        }
+
+
+        //判斷變數內是否有空白 如果沒有空白就把日期格式改為只有日的 有空白就只印出div
         if(!empty($day)){
             $dayFont=date('d',strtotime($day));
-            echo "<div>{$dayFont}</div>";
+            echo "<div class='$checktoday'>{$dayFont}</div>";
 
         }else{
             echo "<div></div>";
