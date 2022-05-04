@@ -70,9 +70,20 @@
     echo "<hr>";
 
     $allDay=[]; //空陣列(準備放入所有天數)
+
+    //將月份前的空白日期放入陣列
+    for($i=0 ; $i<$firstDayWeek ; $i++){
+        $allDay[]="";
+    }
+    
     for($i=0; $i<$monthDay ; $i++){
         $date=date('Y-m-d',strtotime("+$i days",$firstDaySecond));
         $allDay[]=$date;
+    }
+    
+    //將月份後的空白日期放入陣列
+    for($i=0 ; $i<6-$lastDayWeek ; $i++){
+        $allDay[]="";
     }
 
     echo "<pre>";
