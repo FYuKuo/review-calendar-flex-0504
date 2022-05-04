@@ -13,24 +13,35 @@
             display: flex;
             flex-wrap: wrap;
             width: 700px;
-            height: 700px;
+            /* height: 700px; */
             align-content: flex-start;
             text-align: center;
             margin: 10px auto;
+            background-color: #E9DBFF;
+            border-radius: 25px;
+
         }
 
         .table>div {
             width: 100px;
             height: 100px;
-            border: 1px solid lightgrey;
+            /* border: 1px solid lightgrey; */
             line-height: 100px;
 
+        }
+
+        .table>.headerMonth {
+            width: 100%;
+            height: 80px;
+            line-height: 80px;
+            font-weight: bold;
+            font-size: 20px;
         }
 
         .table>.header {
             width: 100px;
             height: 50px;
-            border: 1px solid lightgrey;
+            /* border: 1px solid lightgrey; */
             line-height: 50px;
             font-weight: bold;
         }
@@ -93,6 +104,8 @@
     echo "<hr>";
 
     echo "<div class='table'>";
+
+    echo "<div class='headerMonth'>$monthFont</div>";
 
     echo "<div class='header'>SUN</div>";
     echo "<div class='header'>MON</div>";
