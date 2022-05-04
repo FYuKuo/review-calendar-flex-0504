@@ -87,8 +87,13 @@
 
     foreach($allDay as $day){
 
+        if(!empty($day)){
+            $dayFont=date('d',strtotime($day));
+            echo "<div>{$dayFont}</div>";
 
-        echo "<div>{$day}</div>";
+        }else{
+            echo "<div></div>";
+        }
     }
 
     echo "</div>";
