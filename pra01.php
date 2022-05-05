@@ -36,6 +36,9 @@
             line-height: 80px;
             font-weight: bold;
             font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 50px;
         }
 
         .table>.header {
@@ -44,6 +47,7 @@
             /* border: 1px solid lightgrey; */
             line-height: 50px;
             font-weight: bold;
+            
         }
 
         .today {
@@ -105,7 +109,15 @@
 
     echo "<div class='table'>";
 
-    echo "<div class='headerMonth'>$monthFont</div>";
+    echo "<div class='headerMonth'>
+    <div>
+    <
+    </div>
+    <div>
+    $monthFont
+    </div>
+    >
+    </div>";
 
     echo "<div class='header'>SUN</div>";
     echo "<div class='header'>MON</div>";
